@@ -35,7 +35,7 @@
                 </items>
             </Select>
             <Input type="text" id="operant2"/>
-            <Button text="Calculate" press="calculate"/>
+            <Button text="{i18n>btnCalculate}" press="calculate"/>
         </content>
     </Page>
 </mvc:View>
