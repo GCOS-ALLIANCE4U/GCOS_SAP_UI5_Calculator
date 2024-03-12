@@ -13,10 +13,13 @@ sap.ui.define([
         return Controller.extend("gcosui5calculator.controller.Main", {
             onInit: function () {
                 var oCalcData = {
+                    // we will pass all variables to the main xml
                     op1:'1',
                     op2:'2',
                     operator: '',
                     result: '',
+
+                    // we will pass this variable to the items attirbute in select
                     aSelect: [
                         {key: '+'},
                         {key: '-'},
@@ -25,7 +28,7 @@ sap.ui.define([
                     ]
                 },
                 oModel = new JSONModel(oCalcData);
-                this.setModel(oModel);
+                this.getView().setModel(oModel);
             },
             calculate: function() {
                var operant1 = this.byId("operant1"),
