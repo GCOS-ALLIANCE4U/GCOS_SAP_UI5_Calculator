@@ -13,7 +13,7 @@
         class="sapUiResponsiveContentPadding"
     >
         <content>
-            <Input type="Text" id="operant1"/>
+            <Input type="Number" id="operant1"/>
             <Select id="operator">
                 <items>
                     <core:Item
@@ -34,7 +34,7 @@
                     />
                 </items>
             </Select>
-            <Input type="text" id="operant2"/>
+            <Input type="Number" id="operant2"/>
             <Button text="{i18n>btnCalculate}" press="calculate"/>
         </content>
     </Page>
