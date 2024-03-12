@@ -1,15 +1,31 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    // import JSON model library
+    "sap/ui/model/json/JSONModel"
+
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, JSONModel) {
         "use strict";
 
         return Controller.extend("gcosui5calculator.controller.Main", {
             onInit: function () {
-
+                var oCalcData = {
+                    op1:'1',
+                    op2:'2',
+                    operator: '',
+                    result: '',
+                    aSelect: [
+                        {key: '+'},
+                        {key: '-'},
+                        {key: '*'},
+                        {key: '/'}
+                    ]
+                },
+                oModel = new JSONModel(oCalcData);
+                this.setModel(oModel);
             },
             calculate: function() {
                var operant1 = this.byId("operant1"),
