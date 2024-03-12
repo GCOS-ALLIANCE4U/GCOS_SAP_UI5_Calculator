@@ -34,7 +34,7 @@
                 </items>
             </Select>
             <Input type="text"/>
-            <Button text="Calculate"/>
+            <Button text="Calculate" press="calculate"/>
         </content>
     </Page>
 </mvc:View>
