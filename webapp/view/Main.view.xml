@@ -1,7 +1,40 @@
-<mvc:View controllerName="gcosui5calculator.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+<!-- do not forget to import xmlns:core to be able to use core:Item in the select -->
+
+<mvc:View
+    controllerName="gcosui5calculator.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Input type="Text" />
+            <Select>
+                <items>
+                    <core:Item
+                        key="+"
+                        text="+"
+                    />
+                    <core:Item
+                        key="-"
+                        text="-"
+                    />
+                    <core:Item
+                        key="*"
+                        text="*"
+                    />
+                    <core:Item
+                        key="/"
+                        text="/"
+                    />
+                </items>
+            </Select>
+            <Input type="text"/>
+            <Button text="Calculate"/>
+        </content>
     </Page>
 </mvc:View>
