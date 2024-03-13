@@ -14,9 +14,9 @@
     >
         <content>
             <Input type="Number" id="operant1" value="{/op1}"/>
-            <Select id="operator" items="{/aSelect}" selectedKey="{operator}">
+            <Select id="operator" items="{/aSelect}" selectedKey="{/operator}">
                 <items>
-
+<!-- To reduce the code -->
                 <core:Item
                         key="{key}"
                         text="{key}"

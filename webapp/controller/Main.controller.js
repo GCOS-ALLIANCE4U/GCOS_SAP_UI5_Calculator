@@ -18,7 +18,6 @@ sap.ui.define([
                     op2:'2',
                     operator: '',
                     result: '',
-
                     // we will pass this variable to the items attirbute in select
                     aSelect: [
                         {key: '+'},
@@ -31,14 +30,20 @@ sap.ui.define([
                 this.getView().setModel(oModel);
             },
             calculate: function() {
-               var operant1 = this.byId("operant1"),
+               var oModel = this.getView().getModel(),
+            /*  operant1 = this.byId("operant1"),
                 operant2 = this.byId("operant2"),
-                operator = this.byId("operator"),
+                operator = this.byId("operator"), */
 
                 // we have string type, to convert it to integer use parseInt
-                sValue1 = parseInt(operant1.getValue(),10),
+            /*  sValue1 = parseInt(operant1.getValue(),10),
                 sValue2 = parseInt(operant2.getValue(),10),
-                sOperator = operator.getSelectedKey(),
+                sOperator = operator.getSelectedKey(), */
+
+                sValue1 = parseInt(oModel.getProperty("/op1"),10),
+                sValue2 = parseInt(oModel.getProperty("/op2"),10),
+                sOperator = oModel.getProperty("/operator"),
+
                 iResult = 0;
 
                 switch(sOperator) {
