@@ -42,7 +42,7 @@
             <Input type="Number" id="operant2" value="{/op2}"/>
             <Button text="{i18n>btnCalculate}" press="calculate"/>
 
-            <Text text = "{parts: [{path: '/result1'}], formatter : '.formatResult'}"/>
+            <Text text = "{parts: [{path: '/result'}], formatter : '.formatResult'}" class="sapUiLargeMarginBegin"/>
         </content>
     </Page>
 </mvc:View>
