@@ -41,6 +41,8 @@
             </Select>
             <Input type="Number" id="operant2" value="{/op2}"/>
             <Button text="{i18n>btnCalculate}" press="calculate"/>
+
+            <Text text = "{parts: [{path: '/result1'}], formatter : '.formatResult'}"/>
         </content>
     </Page>
 </mvc:View>

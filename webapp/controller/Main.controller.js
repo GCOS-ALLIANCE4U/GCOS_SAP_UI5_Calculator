@@ -60,7 +60,8 @@ sap.ui.define([
                         iResult = sValue1 / sValue2;
                         break;
                 }
-                alert("The result:" + iResult); 
+           // alert("The result:" + iResult); 
+           oModel.setProperty("/result1", iResult);
             }
         });
     });
